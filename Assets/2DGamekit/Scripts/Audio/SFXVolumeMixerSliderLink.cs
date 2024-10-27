@@ -8,7 +8,7 @@ using System.IO;
 namespace Gamekit2D
 {
     [RequireComponent(typeof(Slider))]
-    public class MusicVolumeMixerSliderLink : MonoBehaviour
+    public class SFXVolumeMixerSliderLink : MonoBehaviour
     {
         public AudioMixer mixer;
         public string mixerParameter;
@@ -23,7 +23,7 @@ namespace Gamekit2D
 
         void Awake()
         {
-            filePath = Path.Combine(Application.dataPath, "MusicVolumeData.jsonMasterVolume");
+            filePath = Path.Combine(Application.dataPath, "SFXVolumeData.jsonMasterVolume");
             folderPath = Path.Combine(Application.persistentDataPath, "AudioData");
             m_Slider = GetComponent<Slider>();
             LoadMasterVolume();
@@ -42,12 +42,12 @@ namespace Gamekit2D
 
         public void SaveMasterVolume()
         {
-            if(!Directory.Exists(folderPath))
+            if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            MusicVolumeData data = new MusicVolumeData();
-            data.musicVolumeLevel = m_Slider.value;
+            SFX_Data data = new SFX_Data();
+            data.sfxVolumeLevel = m_Slider.value;
 
             string json = JsonUtility.ToJson(data, true);
             File.WriteAllText(filePath, json);
@@ -60,15 +60,12 @@ namespace Gamekit2D
             {
                 string json = File.ReadAllText(filePath);
                 Debug.Log(json);
-                MusicVolumeData data = JsonUtility.FromJson<MusicVolumeData>(json);
+                SFX_Data data = JsonUtility.FromJson<SFX_Data>(json);
 
-                m_Slider.value = data.musicVolumeLevel;
-                float mixerValue = minAttenuation + data.musicVolumeLevel * (maxAttenuation - minAttenuation);
+                m_Slider.value = data.sfxVolumeLevel;
+                float mixerValue = minAttenuation + data.sfxVolumeLevel * (maxAttenuation - minAttenuation);
                 mixer.SetFloat(mixerParameter, mixerValue);
             }
         }
     }
 }
-
-
-
