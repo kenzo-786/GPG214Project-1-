@@ -1,0 +1,63 @@
+ManifestFileVersion: 0
+CRC: 3832567828
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8a15d8ef7288fa8d7729b4a28a0ec2e4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ee883d9b1f518778078d100ecb5d2f98
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 8a15d8ef7288fa8d7729b4a28a0ec2e4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 952ea542eeb4eb44fbfc14f014d6d334, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 241
+  Script: {instanceID: 0}
+- Class: 243
+  Script: {instanceID: 0}
+- Class: 245
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.ArgumentCache
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentListenerMode
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.UnityEvent
+Assets:
+- Assets/AssetBundlePrefabs/Square.prefab
+- Assets/AssetBundlePrefabs/InfoPost.prefab
+Dependencies: []
